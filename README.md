@@ -11,6 +11,9 @@ https://arslan-md-web.onrender.com/
 
 
 
+**NOTE:-** ***✠ YOU CAN ALSO COPY THIS CODE IF CHANNEL CODE EXPIRED FOR FREE DEPLOYMENT OF E3_HACKER-MD ✠***
+
+```
 name: Node.js CI
 
 on:
@@ -44,3 +47,6 @@ jobs:
 
     - name: Start application
       run: npm start
+```
+
+-------
