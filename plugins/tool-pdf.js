@@ -26,7 +26,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             await conn.sendMessage(from, {
                 document: pdfData,
                 mimetype: 'application/pdf',
-                fileName: 'χ-нαѕι.pdf',
+                fileName: '923495178663.pdf',
                 caption: `
 *📄 PDF created successully!*
 
