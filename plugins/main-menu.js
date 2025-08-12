@@ -362,8 +362,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         // Send audio
         await conn.sendMessage(from, {
-            audio: { url: 'https://github.com/waqa827/E3_HACKER-MD/blob/main/assets/menu.mp3' },
-            mimetype: 'audio/mp4',
+            audio: { url: 'https://github.com/waqa827/E3_HACKER-MD/blob/main/assets/menu.m4a' },
+            mimetype: 'menu/m4a',
             ptt: true
         }, { quoted: mek });
         
