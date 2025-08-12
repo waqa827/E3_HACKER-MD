@@ -365,6 +365,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             audio: { url: 'https://github.com/waqa827/E3_HACKER-MD/blob/main/assets/menu.mp3' },
             mimetype: 'audio/mp4',
             ptt: true
+            forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363318478753709@newsletter',
+                    newsletterName: config.OWNER_NAME || 'E3_HACKER_𝐌𝐃',
+                    serverMessageId: 143
         }, { quoted: mek });
         
     } catch (e) {
