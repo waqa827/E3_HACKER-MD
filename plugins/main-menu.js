@@ -356,21 +356,23 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                         newsletterName: config.BOT_NAME,
                         serverMessageId: 143
                     }
-                }
-            },
-            { quoted: mek }
-        );
-// share local audio 
+            }
+        }, { quoted: mek });
 
-const audioPath = path.join(__dirname, '../assets/menu.m4a');
-await conn.sendMessage(from, {
-    audio: fs.readFileSync(audioPath),
-    mimetype: 'audio/mp4',
-    ptt: true,
-}, { quoted: mek });
-        
-    } catch (e) {
-        console.log(e);
-        reply(`❌ Error: ${e}`);
+        // Send audio
+        await conn.sendMessage(from, {
+            audio: { url: 'https://files.catbox.moe/ih3eko.mp3' },
+            mimetype: 'audio/mp4',
+            ptt: true,
+            contextInfo: { 
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true
+            }
+        }, { quoted: mek });
+
+    } catch (error) {
+        console.error("Repo command error:", error);
+        reply(`❌ Error: ${error.message}`);
     }
 });
