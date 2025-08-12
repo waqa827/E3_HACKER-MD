@@ -339,8 +339,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• 📹 ytv
 ┃◈╰─────────────────┈⊷
 ╰━━━━━━━━━━━━━━━━━━━┈⊷
-*CHANNE JOIN KAR LO YAR*
-https://whatsapp.com/channel/0029VajnN629RZAbp8aZAa1E
+*CHANNEL JOIN KAR LO YAR*
 > ${config.DESCRIPTION}`;
 
         await conn.sendMessage(
