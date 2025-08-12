@@ -368,6 +368,19 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
                 isForwarded: true
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363318478753709@newsletter',
+                    newsletterName: 'E3 HACKER MD',
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
+
+    } catch (error) {
+        console.error("Error in repo command:", error);
+        reply("Sorry, something went wrong while fetching the repository information. Please try again later.");
+    }
+});
             }
         }, { quoted: mek });
 
