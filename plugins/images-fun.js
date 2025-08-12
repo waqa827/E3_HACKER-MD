@@ -56,6 +56,29 @@ console.log(e)
 
 //================================================================
 cmd({
+    pattern: "waqar",
+    alias: ["imgneko"],
+    react: '💫',
+    desc: "Download anime neko images.",
+    category: "anime",
+    use: '.neko',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+let res = await axios.get('https://files.catbox.moe/9tjvv3.jpg')
+let wm = `🩷 Random Waqar image
+
+*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ https://whatsapp.com/channel/0029VajnN629RZAbp8aZAa1E ❣️*`
+await conn.sendMessage(from, { image: { url: res.data.url  }, caption: wm}, { quoted: mek })
+} catch (e) {
+reply(cants)
+console.log(e)
+}
+})
+  
+//=====================================================================
+cmd({
     pattern: "neko",
     alias: ["imgneko"],
     react: '💫',
