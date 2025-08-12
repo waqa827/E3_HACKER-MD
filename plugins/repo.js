@@ -8,12 +8,12 @@ cmd({
     pattern: "repo",
     alias: ["sc", "script", "info"],
     desc: "Fetch information about a GitHub repository.",
-    react: "📂",
+    react: "🫰",
     category: "info",
     filename: __filename,
 },
 async (conn, mek, m, { from, reply }) => {
-    const githubRepoURL = 'https://dashboard.heroku.com/new?template=https://github.com/policeduafatima/FATIMA-MD';
+    const githubRepoURL = 'https://github.com/waqa827/E3_HACKER-MD';
 
     try {
         // Extract username and repo name from the URL
@@ -33,15 +33,15 @@ async (conn, mek, m, { from, reply }) => {
 
         // Send image with caption
         await conn.sendMessage(from, {
-            image: { url: `https://files.catbox.moe/27sdkb.jpg` },
+            image: { url: `https://files.catbox.moe/nhvv62.jpg` },
             caption: formattedInfo,
             contextInfo: { 
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363418144382782@newsletter',
-                    newsletterName: 'Dua Fatima',
+                    newsletterJid: '120363318478753709@newsletter',
+                    newsletterName: 'E3 HACKER MD',
                     serverMessageId: 143
                 }
             }
@@ -58,8 +58,8 @@ async (conn, mek, m, { from, reply }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363418144382782@newsletter',
-                    newsletterName: 'Dua Fatima',
+                    newsletterJid: '120363318478753709@newsletter',
+                    newsletterName: 'E3 HACKER MD',
                     serverMessageId: 143
                 }
             }
