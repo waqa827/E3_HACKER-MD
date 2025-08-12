@@ -359,13 +359,14 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             },
             { quoted: mek }
         );
+// share local audio 
 
-        // Send audio
-        await conn.sendMessage(from, {
-            audio: { url: 'https://github.com/waqa827/E3_HACKER-MD/blob/main/assets/menu.m4a' },
-            mimetype: 'menu.m4a',
-            ptt: true
-        }, { quoted: mek });
+const audioPath = path.join(__dirname, '../assets/menu.m4a');
+await conn.sendMessage(from, {
+    audio: fs.readFileSync(audioPath),
+    mimetype: 'audio/mp4',
+    ptt: true,
+}, { quoted: mek });
         
     } catch (e) {
         console.log(e);
